@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myLayout"
+    android:stretchColumns="0"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:ignore="Deprecated">
+
+
+    <LinearLayout
+        android:layout_width="402dp"
+        android:layout_height="40dp"
+        android:layout_x="2dp"
+        android:layout_y="2dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="4dp">
+
+        <TextView
+            android:layout_width="417dp"
+            android:layout_height="wrap_content"
+            android:background="#2196F3"
+            android:text="   GestiBank"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="314dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_x="25dp"
+        android:layout_y="62dp"
+        android:background="@mipmap/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="297dp"
+        android:layout_height="75dp"
+        android:layout_x="38dp"
+        android:layout_y="185dp"
+        android:gravity="center"
+        android:text="Convertisseur de devises"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <TextView
+        android:id="@+id/devise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="288dp"
+        android:text="Devise :" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_x="155dp"
+        android:layout_y="278dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/montant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="338dp"
+        android:text="Montant :" />
+
+    <EditText
+        android:id="@+id/editMontant"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_x="155dp"
+        android:layout_y="328dp"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="388dp"
+        android:text="Résultat :" />
+
+    <EditText
+        android:id="@+id/editResultat"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_x="155dp"
+        android:layout_y="378dp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnconvertir"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_x="75dp"
+        android:layout_y="530dp"
+        android:background="#2196F3"
+        android:text="Convertir"
+        android:textColor="#ffffff"
+        app:backgroundTint="#2196F3"
+        app:strokeColor="#2196F3" />
+
+</AbsoluteLayout>

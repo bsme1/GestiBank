@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GestiBank</string>
+    <string-array name="text">
+        <item>Euro</item>
+        <item>Dollar</item>
+        <item>Dinar</item>
+    </string-array>
+</resources>
