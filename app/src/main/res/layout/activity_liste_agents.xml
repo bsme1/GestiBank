@@ -52,7 +52,7 @@
         android:layout_x="38dp"
         android:layout_y="185dp"
         android:gravity="center"
-        android:text="Mon espace administrateur"
+        android:text="Liste des agents"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -60,60 +60,18 @@
         tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="245dp" />
 
-    <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="300dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnconsulter"
-            android:layout_width="375dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:onClick="callListeDemandes"
-            android:password="true"
-            android:text="Consulter les demandes"
-            app:backgroundTint="#2196F3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="400dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnlistA"
-            android:layout_width="375dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_x="6dp"
-            android:layout_y="567dp"
-            android:onClick="callListeAgents"
-            android:text="Lister les agents"
-            app:backgroundTint="#2196F3" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="500dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnajoutA"
-            android:layout_width="375dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_x="6dp"
-            android:layout_y="567dp"
-            android:onClick="callAjoutAgent"
-            android:text="Ajouter des agents"
-            app:backgroundTint="#2196F3" />
-    </LinearLayout>
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="273dp"
+        android:layout_height="444dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="104dp"
+        android:layout_x="50dp"
+        android:layout_y="278dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </AbsoluteLayout>
+
+

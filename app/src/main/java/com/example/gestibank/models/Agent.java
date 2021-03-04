@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Agent {
-    @SerializedName("name")
+    @SerializedName("nom")
     @Expose
     private String name;
 
@@ -29,7 +29,7 @@ public class Agent {
     private String role;
 
 
-    @SerializedName("password")
+    @SerializedName("motdepasse")
     @Expose
     private String password;
 

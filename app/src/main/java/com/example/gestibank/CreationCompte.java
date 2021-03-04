@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.content.Intent;
@@ -22,7 +21,7 @@ import com.example.gestibank.remote.APIUtils;
 import com.example.gestibank.remote.ClientService;
 
 
-public class creationcompte extends AppCompatActivity {
+public class CreationCompte extends AppCompatActivity {
     ClientService clientService;
     List<Client> list;
 
@@ -56,18 +55,14 @@ public class creationcompte extends AppCompatActivity {
             @Override
             public void onResponse(Call<Client> call, Response<Client> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(creationcompte.this, "Client created successfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreationCompte.this, "Client created successfully!", Toast.LENGTH_SHORT).show();
                 }}
             @Override
             public void onFailure(Call<Client> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
-
-
     }
-
-
 
     public void getClientsList(View v){
         Call<List<Client>> call = clientService.getClients();
@@ -112,7 +107,7 @@ public class creationcompte extends AppCompatActivity {
 
 
     public void callauthentification(View view) {
-        Intent i = new Intent(getApplicationContext(), authentification.class);
+        Intent i = new Intent(getApplicationContext(), Authentification.class);
         startActivity(i);
     }
 }

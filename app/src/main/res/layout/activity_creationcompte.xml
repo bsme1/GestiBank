@@ -131,7 +131,7 @@
         android:layout_y="530dp"
         android:background="#2196F3"
         android:clickable="true"
-        android:onClick="getClientsList"
+        android:onClick="addNewClient"
         android:text="Créer un compte"
         android:textColor="#ffffff"
         app:backgroundTint="#2196F3"

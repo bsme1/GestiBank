@@ -47,29 +47,14 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="255dp"
+        android:layout_width="297dp"
         android:layout_height="75dp"
-        android:layout_x="45dp"
-        android:layout_y="228dp"
+        android:layout_x="38dp"
+        android:layout_y="185dp"
         android:gravity="center"
-        android:text="ON VOUS SOUHAITE LA BIENVENUE"
+        android:text="Mon espace agent"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="245dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="255dp"
-        android:layout_height="55dp"
-        android:layout_x="45dp"
-        android:layout_y="361dp"
-        android:gravity="center"
-        android:text="Je voudrais..."
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="22sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:typeface="serif"
         tools:layout_editor_absoluteX="78dp"
@@ -79,16 +64,17 @@
         android:layout_width="375dp"
         android:layout_height="55dp"
         android:layout_x="0dp"
-        android:layout_y="472dp"
+        android:layout_y="300dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btncreatec"
+            android:id="@+id/btngererCl"
             android:layout_width="375dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:onClick="callcreationcompte"
-            android:text="Créer un nouveau compte"
+            android:onClick="callListeDemandes"
+            android:password="true"
+            android:text="Gérer les demandes des clients"
             app:backgroundTint="#2196F3" />
     </LinearLayout>
 
@@ -96,39 +82,20 @@
         android:layout_width="375dp"
         android:layout_height="55dp"
         android:layout_x="0dp"
-        android:layout_y="541dp"
+        android:layout_y="400dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnconvert"
+            android:id="@+id/btnGererCheq"
             android:layout_width="375dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_x="6dp"
             android:layout_y="567dp"
-            android:onClick="callconversion"
-            android:text="Convertir des devises"
+            android:onClick="callListeAgents"
+            android:text="Gérer les chéquiers"
             app:backgroundTint="#2196F3" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="610dp"
-        android:onClick="callAdmin"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnadmin"
-            android:layout_width="375dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_x="6dp"
-            android:layout_y="567dp"
-            android:onClick="callconversion"
-            android:text="Espace administrateur"
-            app:backgroundTint="#2196F3" />
-    </LinearLayout>
 
 </AbsoluteLayout>
