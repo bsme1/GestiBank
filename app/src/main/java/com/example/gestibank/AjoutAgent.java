@@ -24,7 +24,6 @@ import retrofit2.Response;
 
 public class AjoutAgent extends AppCompatActivity {
     AgentService agentService;
-    List<Agent> list = new ArrayList<>();
 
     EditText name;
     EditText prenom;
@@ -43,58 +42,30 @@ public class AjoutAgent extends AppCompatActivity {
         matricule = (EditText) findViewById(R.id.editMatriculeAg);
         email = (EditText) findViewById(R.id.editEmailAg);
         tel = (EditText) findViewById(R.id.editTelAg);
-
-
     }
 
-    public void getAgentList(View v){
-        Call<List<Agent>> call = agentService.getAgents();
-        call.enqueue(new Callback<List<Agent>>() {
+    public void addAgent(View v){
+        Agent agent = new Agent(
+                name.getText().toString(),
+                prenom.getText().toString(),
+                matricule.getText().toString(),
+                tel.getText().toString(),
+                email.getText().toString()
+        );
+        Call<Agent> call = agentService.addAgents(agent);
+        call.enqueue(new Callback<Agent>() {
             @Override
-            public void onResponse(Call<List<Agent>> call, Response<List<Agent>> response) {
+            public void onResponse(Call<Agent> call, Response<Agent> response) {
                 if(response.isSuccessful()){
-                    list = response.body();
-                    Log.i("Data: ", list.toString());
-
-                    StringBuffer buffer=new StringBuffer();
-                    for (Agent user : list)
-                    {
-
-                        buffer.append("Name: "+user.getName()+"\n");
-                        buffer.append("Prenom: "+user.getPrenom()+"\n");
-                        buffer.append("Matricule: "+user.getMatricule()+"\n\n");
-                        buffer.append("Email: "+user.getEmail()+"\n\n");
-                        buffer.append("Password: "+user.getPassword()+"\n");
-                        buffer.append("Tel:"+user.getTel()+"\n");
-                        buffer.append("Role:"+user.getRole()+"\n");
-
-
-                    }
-                    showMessage("Agents List", buffer.toString());
-
-                    // listView.setAdapter(new UserAdapter(MainActivity.this, R.layout.list_user, list));
+                    Toast.makeText(AjoutAgent.this, "Compte Agent créé avec succès!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Agent>> call, Throwable t) {
+            public void onFailure(Call<Agent> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
     }
 
-
-    public void showMessage(String title,String message)
-    {
-        android.app.AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.show();
-    }
-
 }
-
-
-
-

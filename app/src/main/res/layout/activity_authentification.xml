@@ -9,24 +9,6 @@
     tools:ignore="Deprecated">
 
 
-    <LinearLayout
-        android:layout_width="402dp"
-        android:layout_height="40dp"
-        android:layout_x="2dp"
-        android:layout_y="2dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="4dp">
-
-        <TextView
-            android:layout_width="417dp"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:text="   GestiBank"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="314dp"
@@ -36,8 +18,8 @@
         android:layout_marginTop="92dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_x="25dp"
-        android:layout_y="62dp"
+        android:layout_x="45dp"
+        android:layout_y="35dp"
         android:background="@mipmap/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
@@ -49,8 +31,8 @@
         android:id="@+id/textView3"
         android:layout_width="297dp"
         android:layout_height="75dp"
-        android:layout_x="38dp"
-        android:layout_y="185dp"
+        android:layout_x="50dp"
+        android:layout_y="155dp"
         android:gravity="center"
         android:text="S'authentifier"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -64,15 +46,15 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
+        android:layout_x="65dp"
         android:layout_y="288dp"
-        android:text="Login :" />
+        android:text="Login " />
 
     <EditText
         android:id="@+id/editLogin"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
+        android:layout_x="175dp"
         android:layout_y="278dp"
         android:inputType="text" />
 
@@ -80,7 +62,7 @@
         android:id="@+id/motdepasse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
+        android:layout_x="65dp"
         android:layout_y="348dp"
         android:text="Mot de passe :" />
 
@@ -88,7 +70,7 @@
         android:id="@+id/editMotdepasse"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
+        android:layout_x="175dp"
         android:layout_y="338dp"
         android:inputType="text" />
 
@@ -96,9 +78,10 @@
         android:id="@+id/btnconnect"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
-        android:layout_x="75dp"
+        android:layout_x="95dp"
         android:layout_y="530dp"
         android:background="#2196F3"
+        android:onClick="dashboardUser"
         android:text="Se connecter"
         android:textColor="#ffffff"
         app:backgroundTint="#2196F3"

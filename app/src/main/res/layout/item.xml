@@ -10,47 +10,11 @@
 
 
     <LinearLayout
-        android:layout_width="402dp"
-        android:layout_height="40dp"
-        android:layout_x="2dp"
-        android:layout_y="2dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="4dp">
-
-        <TextView
-            android:layout_width="417dp"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:text="   GestiBank"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="314dp"
-        android:layout_height="126dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_x="25dp"
-        android:layout_y="62dp"
-        android:background="@mipmap/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="VectorDrawableCompat" />
-
-    <LinearLayout
         android:id="@+id/textViewinfo"
-        android:layout_width="387dp"
+        android:layout_width="match_parent"
         android:layout_height="185dp"
         android:layout_x="0dp"
-        android:layout_y="225dp"
+        android:layout_y="35dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="400dp">
@@ -69,7 +33,7 @@
 
             <TextView
                 android:id="@+id/textViewNinfo"
-                android:layout_width="259dp"
+                android:layout_width="300dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
 
@@ -88,7 +52,7 @@
 
             <TextView
                 android:id="@+id/textViewPinfo"
-                android:layout_width="259dp"
+                android:layout_width="300dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
 
@@ -107,7 +71,7 @@
 
             <TextView
                 android:id="@+id/textViewMinfo"
-                android:layout_width="259dp"
+                android:layout_width="300dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
 
@@ -125,7 +89,7 @@
 
             <TextView
                 android:id="@+id/textViewEinfo"
-                android:layout_width="259dp"
+                android:layout_width="300dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
 

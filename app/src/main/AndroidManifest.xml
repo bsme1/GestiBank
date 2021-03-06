@@ -13,13 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GestiBank"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Client"></activity>
+        <activity android:name=".models.Currency"></activity>
+        <activity android:name=".Client" />
         <activity android:name=".Agent" />
         <activity android:name=".ListeAgents" />
         <activity android:name=".ListeDemandes" />
         <activity android:name=".AjoutAgent" />
         <activity android:name=".Admin" />
-        <activity android:name=".Conversion" />
+        <activity android:name=".Currency_Activity" />
         <activity android:name=".Authentification" />
         <activity android:name=".CreationCompte" />
         <activity android:name=".MainActivity">

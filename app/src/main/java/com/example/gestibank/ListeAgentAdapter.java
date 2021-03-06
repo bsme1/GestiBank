@@ -13,64 +13,64 @@ import com.example.gestibank.R;
 import com.example.gestibank.models.Agent;
 
 import java.util.List;
+import android.util.Log;
 
 public class ListeAgentAdapter extends BaseAdapter {
 
-    private List<Agent> listData;
-    private LayoutInflater layoutInflater;
+    private  List<Agent> listCustomer;
+    private  LayoutInflater layoutInflater;
     private Context context;
 
     public ListeAgentAdapter(Context aContext, List<Agent> listData) {
         this.context = aContext;
-        this.listData = listData;
+        this.listCustomer = listData;
         layoutInflater = LayoutInflater.from(aContext);
-    }
 
+    }
     @Override
     public int getCount() {
-        return listData.size();
+        return listCustomer.size();
     }
     @Override
     public Object getItem(int position) {
-        return listData.get(position);
+        return listCustomer.get(position);
     }
     @Override
     public long getItemId(int position) {
         return position;
     }
-
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
+        ListeAgentAdapter.ViewHolder holder;
         if (convertView == null) {
             convertView = layoutInflater.inflate(R.layout.item, null);
-            holder = new ViewHolder();
-            holder.mailView = (TextView)
-                    convertView.findViewById(R.id.textViewEinfo);
-            holder.nameView = (TextView)
+            holder = new ListeAgentAdapter.ViewHolder();
+            holder.customerName = (TextView)
                     convertView.findViewById(R.id.textViewNinfo);
-            holder.prenomView = (TextView)
+            holder.customerPrenom = (TextView)
                     convertView.findViewById(R.id.textViewPinfo);
-            holder.matriculeView = (TextView)
+            holder.customerMatricule = (TextView)
                     convertView.findViewById(R.id.textViewMinfo);
-            convertView.setTag(holder);
+            holder.customerEmail = (TextView)
+                    convertView.findViewById(R.id.textViewEinfo);
         } else {
-            holder = (ViewHolder) convertView.getTag();
+            holder = (ListeAgentAdapter.ViewHolder) convertView.getTag();
         }
-        Agent Agent = this.listData.get(position);
-        holder.nameView.setText(Agent.getName());
-        holder.mailView.setText(Agent.getEmail());
-        holder.prenomView.setText(Agent.getPrenom());
-        holder.matriculeView.setText(Agent.getMatricule());
+        Agent customer = this.listCustomer.get(position);
+        holder.customerName.setText("" +customer.getName());
+        holder.customerPrenom.setText("" + customer.getPrenom());
+        holder.customerMatricule.setText("" + customer.getMatricule());
+        holder.customerEmail.setText("" + customer.getEmail());
+
         return convertView;
     }
 
     static class ViewHolder {
-        TextView nameView;
-        TextView mailView;
-        TextView prenomView;
-        TextView matriculeView;
+        TextView customerName;
+        TextView customerPrenom;
+        TextView customerMatricule;
+        TextView customerEmail;
     }
+
 }
-
-
 

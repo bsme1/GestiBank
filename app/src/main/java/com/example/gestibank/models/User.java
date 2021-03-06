@@ -3,26 +3,14 @@ package com.example.gestibank.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Agent {
+public class User {
     @SerializedName("nom")
     @Expose
     private String name;
 
-    @SerializedName("prenom")
-    @Expose
-    private String prenom;
-
-    @SerializedName("matricule")
-    @Expose
-    private String matricule;
-
     @SerializedName("email")
     @Expose
     private String email;
-
-    @SerializedName("tel")
-    @Expose
-    private String tel;
 
     @SerializedName("role")
     @Expose
@@ -32,17 +20,19 @@ public class Agent {
     @Expose
     private String password;
 
+    @SerializedName("tel")
+    @Expose
+    private String tel;
 
-    public Agent(String name, String prenom, String matricule, String email, String tel)
-    {
+    public User(String name, String email, String role, String password, String tel) {
         this.name = name;
-        this.prenom = prenom;
-        this.matricule = matricule;
         this.email = email;
+        this.role = role;
+        this.password = password;
         this.tel = tel;
-        this.role = "AGENT";
-        this.password = "";
     }
+
+    public User(){}
 
     public String getName() {
         return name;
@@ -52,36 +42,12 @@ public class Agent {
         this.name = name;
     }
 
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public String getMatricule() {
-        return matricule;
-    }
-
-    public void setMatricule(String matricule) {
-        this.matricule = matricule;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getTel() {
-        return tel;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
     }
 
     public String getRole() {
@@ -100,17 +66,23 @@ public class Agent {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "Client{" +
-                "name='" + name + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", matricule='" + matricule + '\'' +
-                ", email='" + email + '\'' +
-                ", tel='" + tel + '\'' +
-                ", role='" + role + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public String getTel() {
+        return tel;
     }
 
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
+                ", password='" + password + '\'' +
+                ", tel='" + tel + '\'' +
+                '}';
+    }
 }
+

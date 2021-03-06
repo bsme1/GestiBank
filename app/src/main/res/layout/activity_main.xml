@@ -9,24 +9,6 @@
     tools:ignore="Deprecated">
 
 
-    <LinearLayout
-        android:layout_width="402dp"
-        android:layout_height="40dp"
-        android:layout_x="2dp"
-        android:layout_y="2dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="4dp">
-
-        <TextView
-            android:layout_width="417dp"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:text="   GestiBank"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="314dp"
@@ -36,8 +18,8 @@
         android:layout_marginTop="92dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_x="25dp"
-        android:layout_y="62dp"
+        android:layout_x="45dp"
+        android:layout_y="35dp"
         android:background="@mipmap/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
@@ -49,8 +31,8 @@
         android:id="@+id/textView3"
         android:layout_width="255dp"
         android:layout_height="75dp"
-        android:layout_x="45dp"
-        android:layout_y="228dp"
+        android:layout_x="65dp"
+        android:layout_y="175dp"
         android:gravity="center"
         android:text="ON VOUS SOUHAITE LA BIENVENUE"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -58,14 +40,14 @@
         android:textStyle="bold"
         android:typeface="serif"
         tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="245dp" />
+        tools:layout_editor_absoluteY="238dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="255dp"
         android:layout_height="55dp"
-        android:layout_x="45dp"
-        android:layout_y="361dp"
+        android:layout_x="65dp"
+        android:layout_y="275dp"
         android:gravity="center"
         android:text="Je voudrais..."
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -76,15 +58,15 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <LinearLayout
-        android:layout_width="375dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="472dp"
+        android:layout_x="30dp"
+        android:layout_y="375dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btncreatec"
-            android:layout_width="375dp"
+            android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:onClick="callcreationcompte"
@@ -93,42 +75,65 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="375dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="541dp"
+        android:layout_x="30dp"
+        android:layout_y="450dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnconvert"
-            android:layout_width="375dp"
+            android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:layout_x="6dp"
-            android:layout_y="567dp"
+            android:layout_y="375dp"
             android:onClick="callconversion"
             android:text="Convertir des devises"
             app:backgroundTint="#2196F3" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="55dp"
-        android:layout_x="0dp"
-        android:layout_y="610dp"
-        android:onClick="callAdmin"
+        android:layout_width="392dp"
+        android:layout_height="69dp"
+        android:layout_x="-2dp"
+        android:layout_y="520dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnadmin"
-            android:layout_width="375dp"
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="96dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:layout_x="6dp"
-            android:layout_y="567dp"
-            android:onClick="callconversion"
-            android:text="Espace administrateur"
-            app:backgroundTint="#2196F3" />
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:paddingLeft="45dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:text="Vous êtes déjà client ou administrateur?"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnclient"
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:layout_x="150dp"
+            android:layout_y="290dp"
+            android:background="@color/black"
+            android:text="Cliquez ici"
+            android:onClick="callauthentification"
+            android:textAllCaps="false"
+            android:textColor="#0A4ED1"
+            android:textColorLink="#215CF3"
+            android:textSize="14sp"
+            app:backgroundTint="#FFFFFF" />
     </LinearLayout>
 
 </AbsoluteLayout>

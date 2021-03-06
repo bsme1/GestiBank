@@ -28,9 +28,7 @@ import retrofit2.Response;
 public class ListeAgents extends AppCompatActivity {
 
     AgentService agentService;
-    List<Agent> list = new ArrayList<>();
-    List<Agent> agentList = new ArrayList<>();
-    Context con = this;
+    List<Agent> list;
     ListView listView;
 
     @Override
@@ -40,55 +38,32 @@ public class ListeAgents extends AppCompatActivity {
 
         agentService = APIUtils.getAgentService();
 
-        refresh();
-// When the user clicks on the ListItem
+        listView = findViewById(R.id.listViewAgent);
 
-    }
-
-    public void getAgentList(View v){
         Call<List<Agent>> call = agentService.getAgents();
+
         call.enqueue(new Callback<List<Agent>>() {
             @Override
             public void onResponse(Call<List<Agent>> call, Response<List<Agent>> response) {
                 if(response.isSuccessful()){
+                    System.out.println(response.body());
                     list = response.body();
-                    agentList = list;
-                    Log.i("Data: ", list.toString());
-
-                    StringBuffer buffer=new StringBuffer();
-                    for (Agent user : list)
-                    {
-                        buffer.append("Name: "+user.getName()+"\n");
-                        buffer.append("Prenom: "+user.getPrenom()+"\n");
-                        buffer.append("Matricule: "+user.getMatricule()+"\n\n");
-                        buffer.append("Email: "+user.getEmail()+"\n\n");
-                        buffer.append("Password: "+user.getPassword()+"\n");
-                        buffer.append("Tel:"+user.getTel()+"\n");
-                        buffer.append("Role:"+user.getRole()+"\n");
-                    }
-                    showMessage("Agents List", buffer.toString());
-                    refresh();
-                    //listView.setAdapter(new clientAdapter(MainActivity.this, R.layout.list_client, list));
+                    listView.setAdapter(new ListeAgentAdapter(ListeAgents.this, list));
+                }else {
+                    System.out.println(response.code());
                 }
-            }
 
+            }
             @Override
             public void onFailure(Call<List<Agent>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });
+
+
+
     }
 
-    public void showMessage(String title,String message)
-    {
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.show();
-    }
-    public void refresh() {
-        listView = (ListView) findViewById(R.id.list_view);
-        listView.setAdapter(new ListeAgentAdapter(con, agentList));
-    }
+
 }
+

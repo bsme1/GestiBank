@@ -12,18 +12,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void callCreationCompte(View view) {
+    public void callcreationcompte(View view) {
         Intent i = new Intent(getApplicationContext(), CreationCompte.class);
         startActivity(i);
     }
 
-    public void callConversion(View view) {
-        Intent i = new Intent(getApplicationContext(), Conversion.class);
+    public void callconversion(View view) {
+        Intent i = new Intent(getApplicationContext(), Currency_Activity.class);
         startActivity(i);
     }
 
-    public void callAdmin(View view) {
-        Intent i = new Intent(getApplicationContext(), Admin.class);
+    public void callauthentification(View view) {
+        Intent i = new Intent(getApplicationContext(), Authentification.class);
         startActivity(i);
     }
 }

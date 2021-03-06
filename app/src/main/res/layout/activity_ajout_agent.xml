@@ -9,24 +9,6 @@
     tools:ignore="Deprecated">
 
 
-    <LinearLayout
-        android:layout_width="402dp"
-        android:layout_height="40dp"
-        android:layout_x="2dp"
-        android:layout_y="2dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="4dp">
-
-        <TextView
-            android:layout_width="417dp"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:text="   GestiBank"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="314dp"
@@ -36,8 +18,8 @@
         android:layout_marginTop="92dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_x="25dp"
-        android:layout_y="62dp"
+        android:layout_x="45dp"
+        android:layout_y="35dp"
         android:background="@mipmap/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
@@ -49,8 +31,8 @@
         android:id="@+id/textView3"
         android:layout_width="297dp"
         android:layout_height="75dp"
-        android:layout_x="38dp"
-        android:layout_y="185dp"
+        android:layout_x="50dp"
+        android:layout_y="155dp"
         android:gravity="center"
         android:text="Formulaire d'ajout d'un agent"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -64,80 +46,80 @@
         android:id="@+id/nomAg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
-        android:layout_y="288dp"
-        android:text="Nom :" />
+        android:layout_x="65dp"
+        android:layout_y="268dp"
+        android:text="Nom " />
 
     <EditText
         android:id="@+id/editNameAg"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
-        android:layout_y="278dp"
+        android:layout_x="175dp"
+        android:layout_y="258dp"
         android:inputType="text" />
 
     <TextView
         android:id="@+id/prenomAg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
-        android:layout_y="338dp"
+        android:layout_x="65dp"
+        android:layout_y="318dp"
         android:text="Prénom :" />
 
     <EditText
         android:id="@+id/editPrenomAg"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
-        android:layout_y="328dp"
+        android:layout_x="175dp"
+        android:layout_y="308dp"
         android:inputType="text" />
 
     <TextView
         android:id="@+id/matriculeAg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
-        android:layout_y="388dp"
+        android:layout_x="65dp"
+        android:layout_y="368dp"
         android:text="Matricule :" />
 
     <EditText
         android:id="@+id/editMatriculeAg"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
-        android:layout_y="378dp"
+        android:layout_x="175dp"
+        android:layout_y="358dp"
         android:inputType="number" />
 
     <TextView
         android:id="@+id/emailAg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
-        android:layout_y="438dp"
+        android:layout_x="65dp"
+        android:layout_y="428dp"
         android:text="Email :" />
 
     <EditText
         android:id="@+id/editEmailAg"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
-        android:layout_y="428dp"
+        android:layout_x="175dp"
+        android:layout_y="418dp"
         android:inputType="text" />
 
     <TextView
         android:id="@+id/telAg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="45dp"
-        android:layout_y="488dp"
+        android:layout_x="65dp"
+        android:layout_y="478dp"
         android:text="Tél :" />
 
     <EditText
         android:id="@+id/editTelAg"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_x="155dp"
-        android:layout_y="478dp"
+        android:layout_x="175dp"
+        android:layout_y="468dp"
         android:inputType="number" />
 
 
@@ -145,10 +127,9 @@
         android:id="@+id/btnajoutAg"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
-        android:layout_x="75dp"
-        android:layout_y="575dp"
+        android:layout_x="95dp"
+        android:layout_y="530dp"
         android:background="#2196F3"
-        android:clickable="false"
         android:text="Ajouter un agent"
         android:textColor="#ffffff"
         app:backgroundTint="#2196F3"

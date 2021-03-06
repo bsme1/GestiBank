@@ -9,24 +9,6 @@
     tools:ignore="Deprecated">
 
 
-    <LinearLayout
-        android:layout_width="402dp"
-        android:layout_height="40dp"
-        android:layout_x="2dp"
-        android:layout_y="2dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="4dp">
-
-        <TextView
-            android:layout_width="417dp"
-            android:layout_height="wrap_content"
-            android:background="#2196F3"
-            android:text="   GestiBank"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="314dp"
@@ -37,7 +19,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_x="25dp"
-        android:layout_y="62dp"
+        android:layout_y="45dp"
         android:background="@mipmap/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.562"
@@ -49,8 +31,8 @@
         android:id="@+id/textView3"
         android:layout_width="297dp"
         android:layout_height="75dp"
-        android:layout_x="38dp"
-        android:layout_y="185dp"
+        android:layout_x="50dp"
+        android:layout_y="155dp"
         android:gravity="center"
         android:text="Mon espace administrateur"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -61,36 +43,35 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <LinearLayout
-        android:layout_width="375dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
-        android:layout_x="0dp"
+        android:layout_x="30dp"
         android:layout_y="300dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnconsulter"
-            android:layout_width="375dp"
+            android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
             android:onClick="callListeDemandes"
-            android:password="true"
             android:text="Consulter les demandes"
             app:backgroundTint="#2196F3" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="375dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
-        android:layout_x="0dp"
+        android:layout_x="30dp"
         android:layout_y="400dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnlistA"
-            android:layout_width="375dp"
+            android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_x="6dp"
+            android:layout_x="30dp"
             android:layout_y="567dp"
             android:onClick="callListeAgents"
             android:text="Lister les agents"
@@ -98,18 +79,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="375dp"
+        android:layout_width="350dp"
         android:layout_height="55dp"
-        android:layout_x="0dp"
+        android:layout_x="30dp"
         android:layout_y="500dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnajoutA"
-            android:layout_width="375dp"
+            android:layout_width="350dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_x="6dp"
+            android:layout_x="30dp"
             android:layout_y="567dp"
             android:onClick="callAjoutAgent"
             android:text="Ajouter des agents"

@@ -48,14 +48,14 @@ public class CreationCompte extends AppCompatActivity {
         Client client= new Client(name.getText().toString(),prenom.getText().toString(),email.getText().toString(),tel.getText().toString());
        //Log.i("info",client.toString());
 
-        showMessage("info",client.toString());
+        //showMessage("info",client.toString());
 
         Call<Client> call = clientService.addClient(client);
         call.enqueue(new Callback<Client>() {
             @Override
             public void onResponse(Call<Client> call, Response<Client> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(CreationCompte.this, "Client created successfully!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreationCompte.this, "Client ajouté avec succès!", Toast.LENGTH_SHORT).show();
                 }}
             @Override
             public void onFailure(Call<Client> call, Throwable t) {
